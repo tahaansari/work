@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.tab-nav li{
+			cursor: pointer;
+		}
+		.tab-content>div{
+			display: none;
+		}
+		.tab-content>div:first-child{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	
+	<ul class="tab-nav">
+	  	<li>Nav1</li>
+	  	<li>Nav2</li>
+	  	
+	</ul>	
+	 
+	<div class="tab-content">
+	  	<div>
+		  	nav1 content
+		</div>
+		<div>
+		  	nav2 content
+		</div>
+		
+	</div>
+
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+
+	  	$('.tab-nav li').click(function(){
+	  		var index = $(this).index()+1;
+	  		$('.tab-content>div').hide();
+	  		$('.tab-content>div:nth-child('+index+')').show();
+	  	})
+
+    </script>
+
+</body>
+</html>

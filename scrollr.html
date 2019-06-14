@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+
+		div{
+			height: 200px;
+			background: blue;
+		}
+
+	</style>
+</head>
+<body>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div data-200="width:1%" data-700="width:100%" style="background: blue"></div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var s = skrollr.init({
+				forceHeight:false
+			});
+
+
+
+			$(window).scroll(function(e){
+
+				console.log( $(window).scrollTop() );
+
+
+			})
+
+		})
+	</script>
+</body>
+</html>

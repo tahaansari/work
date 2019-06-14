@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<nav>
+	    <a href="#welcome">Welcome</a>
+	    <a href="#about">About</a>
+	    <a href="#section3">Section 3</a>
+	</nav>
+
+	<div id="welcome">
+		Welcome to this website
+		<br> 
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+	</div>
+	<div id="about">
+		About this website, and such
+		<br> 
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+	</div>
+	<div id="section3">
+		The third section
+		<br> 
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br> 
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br> 
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+	<script type="text/javascript">
+		
+
+		$("nav").find("a").click(function(e) {
+
+		    e.preventDefault();
+		    
+		    var section = $(this).attr("href");
+		    $("html, body").animate({
+		        scrollTop: $(section).offset().top
+		    });
+		});
+
+	</script>
+
+</body>
+</html>

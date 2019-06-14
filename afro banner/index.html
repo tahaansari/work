@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Banner</title>
+		<link rel="stylesheet" type="text/css" href="fonts/font.css">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+
+		
+		<style type="text/css">
+
+			.home-banner img{
+				display: block;
+				width: 100%;
+				opacity: 0.5;
+			}
+
+			.home-banner .slick-list{
+				max-height: 800px;
+			}
+
+			.home-banner .slick-dots {
+			    bottom: 25%;
+			    right: 5%;
+			    width: 215px;
+			    text-align: left;
+			}
+
+			.home-banner .slick-dots li {
+			    width: auto;
+			    height: auto;
+			    padding: 10px 0px;
+			    cursor: pointer;
+			    position: relative;
+			    display: block;
+			    
+			    
+			    border-bottom: 3px solid #9c9c9c73;
+			    color: #ffffffa8;
+			    bottom: 0;
+			    margin-bottom: 25px;
+			}
+
+			.home-banner .slick-dots li::before{
+				position: absolute;
+				left: 0;
+				bottom: -3px;
+
+				transition: 5s;
+				transition-timing-function: linear;
+				transform: scaleX(0);
+			    transform-origin: left;
+
+				content: "";
+				width: 100%;
+				height: 3px;
+				background-color: #65a8f7;
+			}
+
+			.home-banner .slick-dots li:hover:before{
+			    transform: scaleX(1);
+			}
+
+
+
+			.banner-overlay{
+				background-color: black;
+			}
+
+			.home-banner .slick-active{
+			    color: white;
+			}
+
+		</style>
+
+
+	</head>
+	<body>
+
+		<div class="home-banner">
+		  <div>
+		  	<div class="banner-overlay">
+		  		<img src="http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2014/07/sam-burriss-285038.jpg">
+		  	</div>
+		  </div>
+		  <div>
+		  	<div class="banner-overlay">
+		  		<img src="http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2017/04/giovanni-calia-796.jpg">
+		  	</div>
+		  </div>
+		  <div>
+		  	<div class="banner-overlay">
+		  		<img src="http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2013/03/jelly.jpg">
+		  	</div>
+		  </div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+		<script type="text/javascript">
+				
+				$(document).ready(function(){
+
+
+
+					$('.home-banner').slick({
+						dots:true,
+						autoplay:false,
+						fade: true,
+						arrows: false,
+						customPaging : function(slider, i) {
+
+					        if(i==0){
+					        	return "<p class='first'>The top 10 places to go hiking tomorrow</p>";
+					        }else if(i==1){
+					        	return "<p class='second'>We encountered an actual bird paradise</p>";
+					        }else{
+					        	return "<p class='third'>Deep down in the water</p>";
+					        }
+					    },
+					});
+
+					$('.home-banner').on('afterChange', function(event, slick, currentSlide, nextSlide){
+
+					  	// console.log(currentSlide);
+					  	
+					  	console.log($(".slick-dots li"));
+
+
+					});
+				})
+
+		</script>
+
+	</body>
+</html>
