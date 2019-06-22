@@ -1,82 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Bouncing Ball</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style type="text/css">
-		html,body{
-			overflow: hidden;
-		}
+		*{margin:0;padding:0}
+		body,html{overflow:hidden}
 		.ball{
-		    position: absolute;
-		    width: 150px;
-		    height: 150px;
-		    background: #000;
-		    border-radius: 50%;
-
-			top: -100%;
-		    left: 50%;
-		    transform: translateX(-50%);
-
-		   
-		   	animation:bounceIT 4s 1s infinite;
-		    animation-timing-function: ease-in;
+			position:absolute;top:calc(-250px);left:50%;transform:translateX(-50%);
+			animation:bounceIT 3s 2s forwards;
+			animation-timing-function: ease-in;
 		}
-
-		/*@keyframes bounceIT{
-			33.3333333333%{
-				top: calc(100% - 150px);
-			}
-			66.6666666667%{
-				top: 50%;
-			}
-			100%{
-				top: 100%;
-			}
-		}*/
+		.ball img{width: 250px}
 		@keyframes bounceIT{
-			0%{
-				top: -20%;
-				opacity: 1;
-				animation-timing-function: ease-in;
-			}
-			50%{
-				top: 80%;
-				animation-timing-function: ease-out;
-			}
-			62%{
-				top: 50%;
-				 animation-timing-function: ease-in;
-			}
-			72%{
-				top: 80%;
-				 animation-timing-function: ease-out;
-			}
-			80%{
-				top: 60%;
-				 animation-timing-function: ease-in;
-			}
-			86%{
-				top: 80%;
-				 animation-timing-function: ease-out;
-			}
-			90%{
-				 top: 70%;
-				 animation-timing-function: ease-in;
-				 opacity: 1;
-			}
-			95%{
-				top:100%; opacity: 0;
-			}
-			100%{
-				top: -20%; opacity: 0
-			}
+			0%{top:calc(-250px); animation-timing-function: ease-in;}
+			44%{top:calc(100% - 150px); animation-timing-function: ease-out;}
+			58%{top:50%; animation-timing-function: ease-in;}
+			70%{top:calc(100% - 150px); animation-timing-function: ease-out;}
+			80%{top:60%; animation-timing-function: ease-in;}
+			88%{top:calc(100% - 150px); animation-timing-function: ease-out;}
+			94%{top:70%; animation-timing-function: ease-in;}
+			98%{top:calc(100% - 150px); animation-timing-function: ease-out;}
+			100%{top:calc(100% - 150px); animation-timing-function: ease-in;}
 		}
-
 	</style>
 </head>
 <body>
-
-	<div class="ball"></div>
-
+	<div class="ball">
+		<img src="http://tahaansari.in/codepen/ball.png">
+	</div>
 </body>
 </html>
